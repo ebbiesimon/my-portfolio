@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Abia Deborah Simon</title>
+  </head>
+  <body>
+    <div class="menu-open" id="open-nav">
+      <i class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+
+    <header>
+      <div class="header">
+        <div class="logo"><h1>Debbie</h1></div>
+        <div class="navbar">
+          <nav>
+            <ul id="nav-list">
+              <li><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <section id="hero">
+      <div class="hero container">
+        <div>
+          <h1>Hello, <span></span></h1>
+          <h1>My Name is <span></span></h1>
+          <h1>Abia Deborah Simon <span></span></h1>
+          <a href="#contact" type="button" class="btn">Contact Me</a>
+        </div>
+      </div>
+    </section>
+    <div class="body-body">
+      <!-- about section -->
+      <section id="about">
+        <h1>ABOUT</h1>
+        <p class="about-para">
+          Hi, I am Abia Deborah Simon, my friends call me Debbie. I'm a young vibrant
+          and self motivated individual who is passionate about environmental
+          wellness, I am driven by the needs and necessities of her community
+          and tries to breach the gap caused as a result of climate change and
+          insecurity facing her country Nigeria.
+        </p>
+        <div class="about">
+          <div class="column-left">
+            <div class="about-image">
+              <img src="./debbie.jpg" alt="deborah" width="300px" />
+            </div>
+          </div>
+          <div class="column-right">
+            <h3>Student of the Univeristy of Benin</h3>
+            <p>I am a problem solver, I believe Technology is the future.</p>
+            <ul>
+              <li><strong>Birthday:</strong> 13<sup>th</sup> may</li>
+              <li><strong>Phone:</strong> +234(0)9081400966</li>
+              <li><strong>City:</strong> Minna, Niger State</li>
+              <li><strong>Email:</strong>dywanedebbie@gmail.com</li>
+            </ul>
+            <p>
+              When a complex obstacle presents itself,I enjoy finding my way
+              around it with maximum efficiency. I'm happy enough figuring
+              things out in my terminal
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <h1>Contacts</h1>
+        <div class="section-items">
+          <div class="whatsapp">
+            <h3>Whatsapp Number</h3>
+            <p>9081400966</p>
+          </div>
+          <div class="phone">
+            <h3>Phone Number</h3>
+            <p>9081400966</p>
+          </div>
+          <div class="facebook">
+            <h3>Facebook:</h3>
+            <p><a href="facebook.com">Ebbie simon</a></p>
+          </div>
+          <div class="email">
+            <h3>E-mail</h3>
+            <p><a href="gmail.com">dywanedebbie@gmail.com</a></p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <center>&copy; Debbie<span class="output"></span></center>
+    </footer>
+    <script src="./app.js"></script>
+    <script>
+      document
+        .querySelector("#open-nav")
+        .addEventListener("click", function () {
+          document.querySelector("#nav-list").classList.toggle("opennavbar");
+        });
+      document.querySelectorAll("#nav-list li").forEach((item) => {
+        item.addEventListener("click", () => {
+          document.querySelector("#nav-list").classList.remove("opennavbar");
+        });
+      });
+
+      const date = new Date();
+      document.querySelector(".output").textContent = date.getFullYear();
+    </script>
+  </body>
+</html>
